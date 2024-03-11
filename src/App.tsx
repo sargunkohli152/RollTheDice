@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType, StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import { Image, ImageSourcePropType, StyleSheet, View, Text, TouchableOpacity, Vibration } from 'react-native'
 import React, { PropsWithChildren, useState } from 'react';
 
 import DiceOne from '../assets/One.png';
@@ -55,6 +55,8 @@ function App(): JSX.Element{
         setDiceImage(DiceOne);
         break;
     }
+
+    Vibration.vibrate(100, true);
   }
 
   return (
